@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>Tags: VSCode | SFLS GEEK</title>
+        <meta name="author" content="HackerDsg">
+        <meta name="description" content="Share some interesting technologies">
+        <meta name="keywords" content="">
+        <link rel="icon" href="/images/avatar.png">
+        <script src="https://cdn.staticfile.org/vue/3.2.45/vue.global.prod.min.js"></script>
+        <script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.2.1/css/all.min.css">
+        
+        <script src="https://polyfill.io/v3/polyfill.min.js?features="></script>
+        
+        
+        <script src="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.js"></script>
+        <script src="https://cdn.staticfile.org/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.css">
+        
+        
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div id="loading" style="height: 100vh; width: 100vw; position: fixed; display: flex; z-index: 2147483647; justify-content: space-between; background: #fff; transition: opacity 0.3s ease-out, visibility 0.3s; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none">
+    <div style="position: fixed; height: 100vh; width: 100vw; display: flex; justify-content: center; align-items: center">
+        <div id="loadcontent" style="width: 50vmin; height: 50vmin; padding: 50px; border-radius: 50%; display: flex; justify-content: center; align-items: center; border: solid 10px #a3ddfb; text-align: center">
+            <div>
+                <h2>LOADING...</h2>
+                <p style="word-break: keep-all">
+		<script type="text/javascript">
+		var len=36;
+		var rnd=Math.floor(Math.random()*len);
+		var txt=new Array(len);
+		txt[0]="Hold your horses.";
+		txt[1]="Haste makes waste.";
+		txt[2]="A watched pot never boils.";
+		txt[3]="Rome was not built in a day.";
+		txt[4]="No pain, no gain.";
+		txt[5]="No cross, no crown.";
+		txt[6]="Sow nothing, reap nothing.";
+		txt[7]="A good medicine tastes bitter.";
+		txt[8]="April showers bring May flowers.";
+		txt[9]="The finest diamond must be cut.";
+		txt[10]="There is no royal road to learning.";
+		txt[11]="Constant dropping wears away a stone.";
+		txt[12]="Fortune favors the bold.";
+		txt[13]="A bold attempt is half success.";
+		txt[14]="Where there is a will, there is a way.";
+		txt[15]="Failure is the mother of success.";
+		txt[16]="A fall into a pit, a gain in your wit.";
+		txt[17]="Experience is the mother of wisdom.";
+		txt[18]="Look before you leap.";
+		txt[19]="Care and diligence bring luck.";
+		txt[20]="Never let anyone know what you're thinking.";
+		txt[21]="Accidents don't happen to people who take accidents as a personal insult.";
+		txt[22]="The more noble, the more humble.";
+		txt[23]="Knowledge makes humble, ignorance makes proud.";
+		txt[24]="A friend in need is a friend indeed.";
+		txt[25]="A hedge between keeps friendship green.";
+		txt[26]="Without confidence there is no friendship.";
+		txt[27]="Book and friends should be few but good.";
+		txt[28]="A life without a friend is a life without a sun.";
+		txt[29]="A bosom friend afar brings a distant land near";
+		txt[30]="Seeing is believing.";
+		txt[31]="All roads lead to Rome.";
+		txt[32]="Every coin has two sides.";
+		txt[33]="Nothing comes from nothing.";
+		txt[34]="A bad workman blames his tools.";
+		txt[35]="East or west, HackerDsgのHarbor is best.";
+		document.write(txt[rnd]);
+		</script>
+	</p>
+                <div>
+                    <img alt="loading" src="/images/loading.gif" style="height: 50px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div id="layout">
+            <transition name="into">
+            <div v-show="showpage" style="display: -not-none">
+                <div id="menushow">
+                    <nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span style="color: Lavender" class="title">SFLS GEEK</span>
+        </a>
+        <span class="items">
+        
+        <a href="/">
+            <i  style="color: Lightcyan" class="fa-solid fa-house fa-fw"></i>
+            <span style="color: Lightcyan">&ensp;home</span>
+        </a>
+        
+        <a href="/about">
+            <i  style="color: Lightcyan" class="fa-solid fa-id-card fa-fw"></i>
+            <span style="color: Lightcyan">&ensp;about</span>
+        </a>
+        
+        <a href="/archives">
+            <i  style="color: Lightcyan" class="fa-solid fa-search fa-fw"></i>
+            <span style="color: Lightcyan">&ensp;archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i  style="color: Lightcyan" class="fa-solid fa-bookmark fa-fw"></i>
+            <span style="color: Lightcyan">&ensp;categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i  style="color: Lightcyan" class="fa-solid fa-tags fa-fw"></i>
+            <span style="color: Lightcyan">&ensp;tags</span>
+        </a>
+        
+        </span>
+    </div>
+    <div :class="'phone-menu ' + menushow" id="phone-menu">
+        <div class="curtain" @click="menushow = !menushow" v-show="menushow"></div>
+        <div class="title" @click="menushow = !menushow">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;SFLS GEEK</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menushow">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-search fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">archives</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">tags</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+
+                </div>
+                <div id="main">
+                    <div id="archives">
+    
+    <div class="categories-tags">
+        
+        
+        <span>
+            <a href="/tags/C/" style="background: #ffa2c4">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                C++
+            </a>
+        </span>
+        
+        
+        
+        <span>
+            <a href="/tags/VSCode/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                VSCode
+            </a>
+        </span>
+        
+        
+        
+        
+    </div>
+    
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time">2023/1/22</div>
+            <a href="/post/6aef/">
+                <h3>VSCode的安装及环境配置</h3>
+            </a>
+            <div class="info">
+                
+                <span class="category">
+                    <a href="/categories/Experience/">
+                        <span class="icon">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </span>
+                        Experience
+                    </a>
+                </span>
+                
+                
+                <span class="tags">
+                    <span class="icon">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/C/" style="color: #00a596">
+                            C++
+                        </a>
+                    </span>
+                    
+                    <span class="tag">
+                        
+                        <a href="/tags/VSCode/" style="color: #00bcd4">
+                            VSCode
+                        </a>
+                    </span>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+                    <footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2023/01/22 - 2024/03/21<span class="footer-icon"><i class="fa-solid fa-font-awesome fa-fw"></i></span>by HackerDsg
+        </div>
+    </div>
+</footer>
+
+                </div>
+            </div>
+            </transition>
+            <div id="showimg">
+                <img id="showimg-content" alt="showimg">
+            </div>
+        </div>
+        <script src="/js/functions.js"></script>
+<script src="/js/particlex.js"></script>
+
+
+    </body>
+</html>
+
+<canvas width="1777" height="841" style="position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"></canvas>
+<script src="/js/firework.js"></script>
+
+<canvas id="background" style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:-1"></canvas>
+<script src="/js/background.js"></script>
+
+<script type="text/javascript" src="/js/funnytitle.js"></script>
