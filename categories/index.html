@@ -188,11 +188,22 @@
         
         
         <span>
-            <a href="/categories/Experience/" style="background: #ff7d73">
+            <a href="/categories/Experience/" style="background: #00bcd4">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
                 Experience
+            </a>
+        </span>
+        
+        
+        
+        <span>
+            <a href="/categories/Algorithms/" style="background: #ff7d73">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                Algorithms
             </a>
         </span>
         
@@ -204,7 +215,7 @@
                     <footer id="footer">
     <div class="footer-wrap">
         <div>
-            © 2023/01/22 - 2024/03/21<span class="footer-icon"><i class="fa-solid fa-font-awesome fa-fw"></i></span>by HackerDsg
+            © 2023/01/22 - 2024/03/29<span class="footer-icon"><i class="fa-solid fa-font-awesome fa-fw"></i></span>by HackerDsg
         </div>
     </div>
 </footer>
@@ -230,3 +241,35 @@
 <script src="/js/background.js"></script>
 
 <script type="text/javascript" src="/js/funnytitle.js"></script>
+
+<script>
+  function switchNightMode() {
+    $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+      setTimeout(function () {
+        $('body').hasClass('DarkMode') ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'),$('#nightMode').removeClass('fa-moon-o').addClass('fa-lightbulb-o')): ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#nightMode').removeClass('fa-lightbulb-o').addClass('fa-moon-o')),
+          setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+              $(this).remove()
+            })
+          }, 2e3)
+      })
+  }
+  function switchNightModeTop() {
+    $('body').hasClass('DarkMode') ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'),$('#nightMode').removeClass('fa-moon-o').addClass('fa-lightbulb-o')) : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#nightMode').removeClass('fa-lightbulb-o').addClass('fa-moon-o'))
+  }
+</script>
+
+<script>
+if (localStorage.getItem('isDark') === '1') {
+    ('body').addClass('DarkMode');
+    }
+    else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
+    ('body').addClass('DarkMode');
+    } 
+    else if (matchMedia('(prefers-color-scheme: dark)').matches) {
+    ('body').addClass('DarkMode');
+    }
+</script>
+<a onclick="switchNightMode()" id="sma" title="切换主题">
+    <i class="fa fa-lightbulb-o" id="nightMode"  aria-hidden="false"></i>
+</a>

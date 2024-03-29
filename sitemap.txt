@@ -1,3 +1,4 @@
+https://sflsgeek.org/post/48d1/
 https://sflsgeek.org/friends/index.html
 https://sflsgeek.org/about/index.html
 https://sflsgeek.org/post/6aef/
@@ -7,4 +8,6 @@ https://sflsgeek.org/categories/index.html
 https://sflsgeek.org/
 https://sflsgeek.org/tags/C/
 https://sflsgeek.org/tags/VSCode/
+https://sflsgeek.org/tags/Taylor/
 https://sflsgeek.org/categories/Experience/
+https://sflsgeek.org/categories/Algorithms/
