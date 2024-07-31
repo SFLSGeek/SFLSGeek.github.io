@@ -74,13 +74,6 @@
 
   
   <url>
-    <loc>https://sflsgeek.org/tags/Taylor/</loc>
-    <lastmod>2024-07-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://sflsgeek.org/tags/C/</loc>
     <lastmod>2024-07-31</lastmod>
     <changefreq>weekly</changefreq>
@@ -94,17 +87,24 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://sflsgeek.org/tags/Taylor/</loc>
+    <lastmod>2024-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
-    <loc>https://sflsgeek.org/categories/Algorithms/</loc>
+    <loc>https://sflsgeek.org/categories/Experience/</loc>
     <lastmod>2024-07-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://sflsgeek.org/categories/Experience/</loc>
+    <loc>https://sflsgeek.org/categories/Algorithms/</loc>
     <lastmod>2024-07-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

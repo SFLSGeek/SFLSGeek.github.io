@@ -6,8 +6,8 @@ https://sflsgeek.org/404.html
 https://sflsgeek.org/tags/index.html
 https://sflsgeek.org/categories/index.html
 https://sflsgeek.org/
-https://sflsgeek.org/tags/Taylor/
 https://sflsgeek.org/tags/C/
 https://sflsgeek.org/tags/VSCode/
-https://sflsgeek.org/categories/Algorithms/
+https://sflsgeek.org/tags/Taylor/
 https://sflsgeek.org/categories/Experience/
+https://sflsgeek.org/categories/Algorithms/
