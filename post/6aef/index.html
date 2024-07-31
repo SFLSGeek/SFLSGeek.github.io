@@ -205,14 +205,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/C/" style="color: #03a9f4">
+                <a href="/tags/C/" style="color: #00a596">
                     C++
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/VSCode/" style="color: #ff7d73">
+                <a href="/tags/VSCode/" style="color: #ffa2c4">
                     VSCode
                 </a>
             </span>
@@ -224,37 +224,45 @@
     <div class="content" v-pre>
         <p><strong>前言：本人搞VSC搞了两三天，终于搞好了。网上的方法有些杂碎，所以自己写了个总结。</strong></p>
 <span id="more"></span>
-<h1 id="1-安装VSCode"><a href="#1-安装VSCode" class="headerlink" title="1.安装VSCode"></a>1.安装VSCode</h1><p><strong>官网：<a target="_blank" rel="noopener" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></strong></p>
+<h1>1.安装VSCode</h1>
+<p><strong>官网：<a target="_blank" rel="noopener" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></strong></p>
 <p>（注意，不要自己搜索错下载成Visual Studio。下载正确的图标是<strong>蓝色</strong>的，而不是紫色的！）</p>
 <p>如果觉得下载太慢了，可以挂个梯子。我会在之后写一个Clash挂梯子的教程。</p>
 <p>安装没有好讲的，一路前进，记得创建桌面快捷方式。</p>
-<h1 id="2-美观及汉化"><a href="#2-美观及汉化" class="headerlink" title="2.美观及汉化"></a>2.美观及汉化</h1><p>如果认为英文与观感不影响使用的这一步可以跳过。</p>
+<h1>2.美观及汉化</h1>
+<p>如果认为英文与观感不影响使用的这一步可以跳过。</p>
 <p><strong>美化</strong>：初次安装VSCode，会有主题选择与新手教学。在这里，根据喜好选择一个主题，并在教学标记已完成，启动时不显示欢迎界面。</p>
 <p><strong>汉化</strong>：通常来说，只要你的操作系统是中文的，在首次安装的时候会弹出汉化的插件。不过如果没有弹出，点击最左侧下面有一块飞出去的巧克力图标，那个是扩展。在扩展搜索框中搜索Chinese，就能出来汉化插件了，安装重启软件后即可完成汉化。</p>
-<h1 id="3-安装C-扩展"><a href="#3-安装C-扩展" class="headerlink" title="3.安装C++扩展"></a>3.安装C++扩展</h1><p>点击扩展图标，搜索C++，安装 C&#x2F;C++ 及 C&#x2F;C++ Extension Pack 和 C&#x2F;C++ Themes。等右下角的提示窗口消失后，重新启动软件则安装成功。</p>
-<h1 id="4-配置编译器"><a href="#4-配置编译器" class="headerlink" title="4.配置编译器"></a>4.配置编译器</h1><p>在这里，我使用的是MinGW64的编译器，当然懒的也可以直接找到Dev-C++的编译器，通常在“C:\Program Files (x86)\Dev-Cpp\MinGW64”目录下。</p>
+<h1>3.安装C++扩展</h1>
+<p>点击扩展图标，搜索C++，安装 C/C++ 及 C/C++ Extension Pack 和 C/C++ Themes。等右下角的提示窗口消失后，重新启动软件则安装成功。</p>
+<h1>4.配置编译器</h1>
+<p>在这里，我使用的是MinGW64的编译器，当然懒的也可以直接找到Dev-C++的编译器，通常在“C:\Program Files (x86)\Dev-Cpp\MinGW64”目录下。</p>
 <p><strong>MinGW64官网：<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/">https://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/</a></strong></p>
 <p>打开官网后一直往下拉，选当前最新的8.1.0版本。64位操作系统找x86-64，32位找i686。Windows版本下载win32，Linux用户下载posix版本。随后选择带seh的压缩包下载解压，建议解压在C盘外的其它盘。</p>
 <p>随后打开控制面板。在面板中搜索“<strong>高级系统</strong>”，点开“<strong>查看高级系统设置</strong>”，打开“<strong>环境变量</strong>”，单击下方“<strong>系统变量</strong>”中的<strong>Path</strong>，选择<strong>编辑</strong>，单击右侧<strong>新建</strong>，输入刚刚解压的文件夹中bin的路径。以我的为例，就是输入“<strong>E:\VSCode\mingw64\bin</strong>”到这里就配置完成了。打开cmd输入<strong>gcc -v</strong>查看，如果出现十几行代码就说明环境变量配置成功。</p>
-<p>接下来，在一个你常用的地方创建一个文件夹，名字叫“.vscode”。最好是专门创建一个VSCode文件夹，把编译器和.vscode放在一起。 </p>
-<h4 id="注意，这个文件夹十分重要，切忌轻易删除，因为后面重要的json文件及配置都要在这个文件夹中操作。"><a href="#注意，这个文件夹十分重要，切忌轻易删除，因为后面重要的json文件及配置都要在这个文件夹中操作。" class="headerlink" title="注意，这个文件夹十分重要，切忌轻易删除，因为后面重要的json文件及配置都要在这个文件夹中操作。"></a>注意，这个文件夹十分重要，切忌轻易删除，因为后面重要的json文件及配置都要在这个文件夹中操作。</h4><p>接下来配置编译器路径。首先打开VSCode，单击左上角文件，选择打开文件夹，打开我们刚刚创建的.vscode并信任该文件夹。然后按快捷键Ctrl+Shift+P调出命令面板，输入C&#x2F;C++，选择“Edit Configurations(UI)”进入配置。这里需要配置两个选项：</p>
-<p><strong>1.编译器路径：E:&#x2F;VSCode&#x2F;mingw64&#x2F;bin&#x2F;g++.exe</strong></p>
+<p>接下来，在一个你常用的地方创建一个文件夹，名字叫“.vscode”。最好是专门创建一个VSCode文件夹，把编译器和.vscode放在一起。</p>
+<h4 id="注意，这个文件夹十分重要，切忌轻易删除，因为后面重要的json文件及配置都要在这个文件夹中操作。">注意，这个文件夹十分重要，切忌轻易删除，因为后面重要的json文件及配置都要在这个文件夹中操作。</h4>
+<p>接下来配置编译器路径。首先打开VSCode，单击左上角文件，选择打开文件夹，打开我们刚刚创建的.vscode并信任该文件夹。然后按快捷键Ctrl+Shift+P调出命令面板，输入C/C++，选择“Edit Configurations(UI)”进入配置。这里需要配置两个选项：</p>
+<p><strong>1.编译器路径：E:/VSCode/mingw64/bin/g++.exe</strong></p>
 <p>这里的路径根据大家自己安装的编译器位置和配置的环境变量位置所决定。</p>
 <p><strong>2.IntelliSense模式：选择gcc-x64。</strong></p>
 <p>配置完成后，此时在侧边栏可以发现多了一个.vscode文件夹，里面有一个c_cpp_properties.json文件，说明上述配置成功。</p>
-<h1 id="5-配置构建任务"><a href="#5-配置构建任务" class="headerlink" title="5.配置构建任务"></a>5.配置构建任务</h1><p>接下来，需要创建一个tasks.json文件来告诉VSCode如何编译程序。该任务将调用g++编译器基于源代码创建可执行文件。按快捷键Ctrl+Shift+P调出命令面板，输入tasks，选择“<strong>Tasks:Configure Default Build Task</strong>”，再选择“<strong>C&#x2F;C++: g++.exe build active file</strong>”，此时会出现一个名为tasks.json的配置文件。</p>
-<h1 id="6-配置调试设置"><a href="#6-配置调试设置" class="headerlink" title="6.配置调试设置"></a>6.配置调试设置</h1><p>这里主要是为了在.vscode文件夹中产生一个launch.json文件，用来配置调试的相关信息。首先，按下Ctrl+N新建一个文件，随便打点代码，以下为示例：</p>
-<pre><code class="cpp">#include&lt;iostream&gt;
+<h1>5.配置构建任务</h1>
+<p>接下来，需要创建一个tasks.json文件来告诉VSCode如何编译程序。该任务将调用g++编译器基于源代码创建可执行文件。按快捷键Ctrl+Shift+P调出命令面板，输入tasks，选择“<strong>Tasks:Configure Default Build Task</strong>”，再选择“<strong>C/C++: g++.exe build active file</strong>”，此时会出现一个名为tasks.json的配置文件。</p>
+<h1>6.配置调试设置</h1>
+<p>这里主要是为了在.vscode文件夹中产生一个launch.json文件，用来配置调试的相关信息。首先，按下Ctrl+N新建一个文件，随便打点代码，以下为示例：</p>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
 using namespace std;
 int main()&#123;
     cout&lt;&lt;&quot;hello, world&quot;;
     return 0;
 &#125;
 </code></pre>
-<p>随后按下F5编译，选择C++(GDB&#x2F;LLDB)，在接下来的界面中选择g++.exe，然后在底下会出来一串代码，紧接着会在左侧产生一个横条，点击“创建launch.json文件”。检查一下，如果在之前创建的.vscode文件夹内有一个launch.json文件，就说明成功了。</p>
+<p>随后按下F5编译，选择C++(GDB/LLDB)，在接下来的界面中选择g++.exe，然后在底下会出来一串代码，紧接着会在左侧产生一个横条，点击“创建launch.json文件”。检查一下，如果在之前创建的.vscode文件夹内有一个launch.json文件，就说明成功了。</p>
 <p>之后，按下F5编译后，会在cpp文件下新建一个exe程序，点开exe程序就能执行操作了。</p>
-<h1 id="7-默认编译设置"><a href="#7-默认编译设置" class="headerlink" title="7.默认编译设置"></a>7.默认编译设置</h1><p>没有设置这个的话，每次按下F5都会让你选择一个编译器进行编译。而有了这个，按下F5可以直接编译运行了。进行这个操作需要用到launch.json文件。首先，打开.vscode文件夹，找到launch.json，随后把以下代码复制进去：</p>
-<pre><code class="json">&#123;
+<h1>7.默认编译设置</h1>
+<p>没有设置这个的话，每次按下F5都会让你选择一个编译器进行编译。而有了这个，按下F5可以直接编译运行了。进行这个操作需要用到launch.json文件。首先，打开.vscode文件夹，找到launch.json，随后把以下代码复制进去：</p>
+<pre><code class="language-json">&#123;
     // 使用 IntelliSense 了解相关属性。 
     // 悬停以查看现有属性的描述。
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
@@ -286,14 +294,17 @@ int main()&#123;
 </code></pre>
 <p>其中，cwd和miDebuggerPath改成你的编译器路径。保存后，cpp文件就会自动编译了。</p>
 <p>另外，以上代码会让VSCode编译器按下F5后不像Dev一样显示控制台窗口，通过修改externalConsole为true可以改为显示。</p>
-<h1 id="8-缺省源设置"><a href="#8-缺省源设置" class="headerlink" title="8.缺省源设置"></a>8.缺省源设置</h1><p>何为缺省源？缺省源就是在你新建一个文件的时候默认出现的代码。</p>
+<h1>8.缺省源设置</h1>
+<p>何为缺省源？缺省源就是在你新建一个文件的时候默认出现的代码。</p>
 <p>在VSCode中按下Ctrl+Shift+P，在弹出的对话框中输入Configure User Snippets，选择新建全局代码片段，随便取个名按下Enter，然后就能设置缺省源了。</p>
 <p>我的json文件见：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/paste/robl6cz4">https://www.luogu.com.cn/paste/robl6cz4</a></p>
 <p>设置完缺省源后，按下Ctrl+S保存文件，然后新建个文件，打出#include，弹出来的第一个就是我们设置的缺省源，按下回车就出现代码了。</p>
-<h1 id="9-完全卸载"><a href="#9-完全卸载" class="headerlink" title="9.完全卸载"></a>9.完全卸载</h1><p>如果之前安装过VSCode但是只是简单卸载，再次安装后会出现之前的配置信息，包括打开的文件夹、安装过的扩展等，这是因为之前没有完全将VSCode卸载干净造成的。</p>
+<h1>9.完全卸载</h1>
+<p>如果之前安装过VSCode但是只是简单卸载，再次安装后会出现之前的配置信息，包括打开的文件夹、安装过的扩展等，这是因为之前没有完全将VSCode卸载干净造成的。</p>
 <p>如果想干净卸载掉VSCode再重新安装的话，就需要在卸载之后再删除掉两个目录的内容。分别是：<strong>C:\Users\用户名.vscode 和 C:\Users\用户名\AppData\Roaming\Code</strong></p>
 <p>删除掉这两个目录的内容之后，再安装VSCode，就相当于是全新安装了。</p>
-<h1 id="End-结语"><a href="#End-结语" class="headerlink" title="End.结语"></a>End.结语</h1><p>到这里，VSCode的配置基本上就弄好了，开启你的愉快旅程吧！鉴于本人能力有限，如有解释不清的，详情见下方知乎通道。</p>
+<h1>End.结语</h1>
+<p>到这里，VSCode的配置基本上就弄好了，开启你的愉快旅程吧！鉴于本人能力有限，如有解释不清的，详情见下方知乎通道。</p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/87864677">参考来源：https://zhuanlan.zhihu.com/p/87864677</a></p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/62913725">第一次使用VSCode应该知道的设置</a></p>
 <p>附：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/paste/nqq35kic">tasks.json</a>，<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/paste/zron54pi">c_cpp_properties.json</a>，<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/paste/robl6cz4">缺省源</a>，<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/paste/aal9qmc2">launch.json</a></p>

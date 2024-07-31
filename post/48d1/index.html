@@ -205,7 +205,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/Taylor/" style="color: #00bcd4">
+                <a href="/tags/Taylor/" style="color: #ffa2c4">
                     Taylor
                 </a>
             </span>
@@ -217,34 +217,56 @@
     <div class="content" v-pre>
         <p><strong>这个教程会以简单易懂的方式推导泰勒展开公式。</strong></p>
 <span id="more"></span>
-
-<p> <span>0. 变限积分求解</span></p>
-<p>$$\large \int_{0}^{x} \int_{0}^{x} \int_{0}^{x} 1 \, dx \, dx , dx &#x3D; , ?$$</p>
+<p><span>0. 变限积分求解</span></p>
+<p>$$\large \int_{0}^{x} \int_{0}^{x} \int_{0}^{x} 1 \, dx \, dx , dx = , ?$$</p>
 <p>$$\text{先解最内层变限积分：}$$</p>
-<p>$$\large  \int_{0}^{x} 1 , du &#x3D; u \Big|_{0}^{x} &#x3D; x - 0 &#x3D; x $$</p>
+<p>$$\large  \int_{0}^{x} 1 , du = u \Big|_{0}^{x} = x - 0 = x $$</p>
 <p>$$\text{将最内层变限积分的解带入第二层积分：}$$</p>
-<p>$$\large  \int_{0}^{x} \int_{0}^{x} x , dx , dx &#x3D; , ?$$</p>
+<p>$$\large  \int_{0}^{x} \int_{0}^{x} x , dx , dx = , ?$$</p>
 <p>$$\text{再解第二层变限积分：}$$</p>
-<p>$$\large  \int_{0}^{x} x , dx &#x3D; \frac{1}{2!}x^2\Big|_{0}^{x} $$</p>
+<p>$$\large  \int_{0}^{x} x , dx = \frac{1}{2!}x^2\Big|_{0}^{x} $$</p>
 <p>$$\text{把积分符号内的x看作u: }$$</p>
-<h3 id="large-int-0-x-u-du-x3D-frac-1-2-u-2-Big-0-x"><a href="#large-int-0-x-u-du-x3D-frac-1-2-u-2-Big-0-x" class="headerlink" title="$$\large  \int_{0}^{x} u , du &#x3D; \frac{1}{2!}u^2\Big|_{0}^{x} $$"></a>$$\large  \int_{0}^{x} u , du &#x3D; \frac{1}{2!}u^2\Big|_{0}^{x} $$</h3><p>$$\text{求解：}$$</p>
-<p>\large  \frac{1}{2!}u^2\Big|_{0}^{x} &#x3D; \frac{1}{2!}x^2 - \frac{1}{2!}(0)^2 </p>
+<h3 id="large-int-0-x-u-du-frac-1-2-u-2-Big-0-x">$$\large  \int_{0}^{x} u , du = \frac{1}{2!}u^2\Big|_{0}^{x} $$</h3>
+<p>$$\text{求解：}$$</p>
+<p>\large  \frac{1}{2!}u^2\Big|_{0}^{x} = \frac{1}{2!}x^2 - \frac{1}{2!}(0)^2</p>
 <p>$$\text{得出第二层变限积分结果为：}$$</p>
 <p>$$\large  \frac{1}{2!}x^2 $$</p>
-<p>$$\text{将第二层变限积分的解带入最外层积分：}$$<br>$$\large  \int_{0}^{x} \frac{1}{2!}x^2 , dx &#x3D; , ?$$<br>$$\text{解最外层变限积分：}$$<br>$$\large  \int_{0}^{x} \frac{1}{2!}x^2 , dx &#x3D; \frac{1}{3!}x^3\Big|<em>{0}^{x} $$<br>$$\text{把积分符号内的x看作u: }$$<br>$$\large  \int</em>{0}^{x} \frac{1}{2!}u^2 , du &#x3D; \frac{1}{3!}u^3\Big|_{0}^{x} $$<br>$$\text{得出最外层变限积分结果为：}$$<br>$$\large  \frac{1}{3!}x^3 - \frac{1}{3!}(0)^3 &#x3D; \frac{1}{3!}x^3 $$</p>
-<p> <span> 1. 泰勒公式推导</span></p>
-<p>$$\large f(x) &#x3D; \int_{c}^{x} f’(x) , dx + f(a)$$<br>$$\large f’(x) &#x3D; \int_{c}^{x} f’’(x) , dx + f’(a)$$<br>$$\large f’’(x) &#x3D; \int_{c}^{x} f’’’(x) , dx + f’’(a)$$<br>$$\large f’’’(x) &#x3D; \int_{c}^{x} f^{(4)}(x) , dx + f’’’(a)$$</p>
-<p>f(x) &#x3D; ∫_{c}^{x} f’(x) , dx + f(a)<br>f’(x) &#x3D; ∫_{c}^{x} f’’(x) , dx + f’(a)<br>f’’(x) &#x3D; ∫_{c}^{x} f’’’(x) , dx + f’’(a)<br>f’’’(x) &#x3D; ∫_{c}^{x} f^{(4)}(x) , dx + f’’’(a)</p>
-<p> 原函数的信息&#x3D;导函数的信息积分+初始值<br>$$\large f(x) &#x3D; \int_{c}^{x} \left( \int_{c}^{x} \left( \int_{c}^{x} \left( \int_{c}^{x} f^{(4)}(x) , dx + f’’’(a) \right) , dx + f’’(a) \right) , dx + f’(a) \right) , dx + f(a)$$</p>
-<p>$$\large f(x) &#x3D; \int_{c}^{x} \left( \int_{c}^{x} \left( \int_{c}^{x} \left( \int_{c}^{x} f^{(4)}(x) , dx + f’’’(a) \right) , dx \right) , dx + f’’(a) \right) + \frac{f’(a)}{1!} \cdot (x-c)^1 + f(a)$$</p>
-<p>$$\large f(x) &#x3D; \int_{c}^{x} \left( \int_{c}^{x} \left( \int_{c}^{x} \left( \int_{c}^{x} f^{(4)}(x) , dx \right) , dx + f’’’(a) \right) , dx + \frac{f’’(a)}{2!} \cdot (x-c)^2 + \frac{f’(a)}{1!} \cdot (x-c)^1 + f(a) \right) , dx$$</p>
-<p>$$\large f(x) &#x3D; \int_{c}^{x} \left( \int_{c}^{x} \left( \int_{c}^{x} \left( \int_{c}^{x} f^{(4)}(x) , dx \right) , dx + \frac{f’’’(a)}{3!} \cdot (x-c)^3 + \frac{f’’(a)}{2!} \cdot (x-c)^2 + \frac{f’(a)}{1!} \cdot (x-c)^1 + f(a) \right) , dx \right)$$</p>
+<p>$$\text{将第二层变限积分的解带入最外层积分：}$$<br>
+$$\large  \int_{0}^{x} \frac{1}{2!}x^2 , dx = , ?$$<br>
+$$\text{解最外层变限积分：}$$<br>
+$$\large  \int_{0}^{x} \frac{1}{2!}x^2 , dx = \frac{1}{3!}x^3\Big|<em>{0}^{x} $$<br>
+$$\text{把积分符号内的x看作u: }$$<br>
+$$\large  \int</em>{0}^{x} \frac{1}{2!}u^2 , du = \frac{1}{3!}u^3\Big|_{0}^{x} $$<br>
+$$\text{得出最外层变限积分结果为：}$$<br>
+$$\large  \frac{1}{3!}x^3 - \frac{1}{3!}(0)^3 = \frac{1}{3!}x^3 $$</p>
+<p><span> 1. 泰勒公式推导</span></p>
+<p>$$\large f(x) = \int_{c}^{x} f’(x) , dx + f(a)$$<br>
+$$\large f’(x) = \int_{c}^{x} f’‘(x) , dx + f’(a)$$<br>
+$$\large f’‘(x) = \int_{c}^{x} f’‘’(x) , dx + f’‘(a)$$<br>
+$$\large f’‘’(x) = \int_{c}^{x} f^{(4)}(x) , dx + f’‘’(a)$$</p>
+<p>f(x) = ∫_{c}^{x} f’(x) , dx + f(a)<br>
+f’(x) = ∫_{c}^{x} f’‘(x) , dx + f’(a)<br>
+f’‘(x) = ∫_{c}^{x} f’‘’(x) , dx + f’‘(a)<br>
+f’‘’(x) = ∫_{c}^{x} f^{(4)}(x) , dx + f’‘’(a)</p>
+<p>原函数的信息=导函数的信息积分+初始值<br>
+$$\large f(x) = \int_{c}^{x} \left( \int_{c}^{x} \left( \int_{c}^{x} \left( \int_{c}^{x} f^{(4)}(x) , dx + f’‘’(a) \right) , dx + f’‘(a) \right) , dx + f’(a) \right) , dx + f(a)$$</p>
+<p>$$\large f(x) = \int_{c}^{x} \left( \int_{c}^{x} \left( \int_{c}^{x} \left( \int_{c}^{x} f^{(4)}(x) , dx + f’‘’(a) \right) , dx \right) , dx + f’‘(a) \right) + \frac{f’(a)}{1!} \cdot (x-c)^1 + f(a)$$</p>
+<p>$$\large f(x) = \int_{c}^{x} \left( \int_{c}^{x} \left( \int_{c}^{x} \left( \int_{c}^{x} f^{(4)}(x) , dx \right) , dx + f’‘’(a) \right) , dx + \frac{f’‘(a)}{2!} \cdot (x-c)^2 + \frac{f’(a)}{1!} \cdot (x-c)^1 + f(a) \right) , dx$$</p>
+<p>$$\large f(x) = \int_{c}^{x} \left( \int_{c}^{x} \left( \int_{c}^{x} \left( \int_{c}^{x} f^{(4)}(x) , dx \right) , dx + \frac{f’‘’(a)}{3!} \cdot (x-c)^3 + \frac{f’‘(a)}{2!} \cdot (x-c)^2 + \frac{f’(a)}{1!} \cdot (x-c)^1 + f(a) \right) , dx \right)$$</p>
 <p>$$\text{以此类推，前面剩余的积分为余项，后面为泰勒展开公式。}$$</p>
-<p>$$\large f(x) &#x3D; f(a) + \frac{f’(a)}{1!} \cdot (x-c)^1 + \frac{f’’(a)}{2!} \cdot (x-c)^2 + \frac{f’’’(a)}{3!} \cdot (x-c)^3 + \ldots$$</p>
-<p> <span> End. </span><br> 如内容有错误或不明确的地方欢迎联系我进行更正！</p>
-<p>$$\large f(x) &#x3D; \int_{c}^{x} f’(x) , dx + f(a)<br>$$<br>$$<br>\large f’(x) &#x3D; \int_{c}^{x} f’’(x) , dx + f’(a)<br>$$<br>$$<br>\large f’’(x) &#x3D; \int_{c}^{x} f’’’(x) , dx + f’’(a)$$<br>$$\large f’’’(x) &#x3D; \int_{c}^{x} f^{(4)}(x) , dx + f’’’(a)$$</p>
-<p>$x^2+y^2&#x3D;z^2$</p>
-<p>$$ \huge \int_{0}^{x} \int_{0}^{x} \int_{0}^{x} 1 , dx , dx , dx &#x3D; , ? $$</p>
+<p>$$\large f(x) = f(a) + \frac{f’(a)}{1!} \cdot (x-c)^1 + \frac{f’‘(a)}{2!} \cdot (x-c)^2 + \frac{f’‘’(a)}{3!} \cdot (x-c)^3 + \ldots$$</p>
+<p><span> End. </span><br>
+如内容有错误或不明确的地方欢迎联系我进行更正！</p>
+<p>$$\large f(x) = \int_{c}^{x} f’(x) , dx + f(a)<br>
+$$<br>
+$$<br>
+\large f’(x) = \int_{c}^{x} f’‘(x) , dx + f’(a)<br>
+$$<br>
+$$<br>
+\large f’‘(x) = \int_{c}^{x} f’‘’(x) , dx + f’‘(a)$$<br>
+$$\large f’‘’(x) = \int_{c}^{x} f^{(4)}(x) , dx + f’‘’(a)$$</p>
+<p>$x^2+y^2=z^2$</p>
+<p>$$ \huge \int_{0}^{x} \int_{0}^{x} \int_{0}^{x} 1 , dx , dx , dx = , ? $$</p>
 
     </div>
     
